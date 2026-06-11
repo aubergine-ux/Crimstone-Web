@@ -6,4 +6,4 @@ A Discord bot built with [Discord.js](https://discord.js.org/)! ~ invite it to y
 
 🌐 **Website:** [crim.aubergineux.com](https://crim.aubergineux.com/)
 
-📨 **Invite Crim:** [Add to your server](#) *(link coming soon)*
+📨 **Invite Crim:** [Add to your server](https://discord.com/oauth2/authorize?client_id=1507721065235877958)
