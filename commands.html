@@ -33,7 +33,7 @@
 
         <div class="command-category">
             <h3 class="category-title">Moderation</h3>
-            <div class="command list">
+            <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">/ban</span>
                     <span class="command-desc">Ban a User from the Server</span>
@@ -43,8 +43,8 @@
                     <span class="command-desc">Kick a User from the Server</span>
                 </div>
                 <div class="command-item">
-                    <span class="command-name">/mute</span>
-                    <span class="command-desc">Mute a User for a Set Duration</span>
+                    <span class="command-name">/nickname</span>
+                    <span class="command-desc">Change a User's Nickname</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/purge</span>
@@ -53,6 +53,10 @@
                 <div class="command-item">
                     <span class="command-name">/timeout</span>
                     <span class="command-desc">Mutes a User for a Set Duration</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/slowmode</span>
+                    <span class="command-desc">Set Slowmode for a Channel</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/role-give</span>
@@ -67,15 +71,45 @@
                     <span class="command-desc">Search for Users with a Role</span>
                 </div>
                 <div class="command-item">
-                    <span class="command-name">/slowmode</span>
-                    <span class="command-desc">Set Slowmode for a Channel</span>
+                    <span class="command-name">/warn</span>
+                    <span class="command-desc">Warn a User</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/unwarn</span>
+                    <span class="command-desc">Remove a Warning from a User</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/warnings</span>
+                    <span class="command-desc">View a User's Warnings</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Leveling</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <span class="command-name">/rank</span>
+                    <span class="command-desc">View a User's Rank & Level</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/leaderboard</span>
+                    <span class="command-desc">View the Server's Top Ranks</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/givexp</span>
+                    <span class="command-desc">Give XP to a User</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/setxp</span>
+                    <span class="command-desc">Set a User's XP</span>
                 </div>
             </div>
         </div>
 
         <div class="command-category">
             <h3 class="category-title">Music [W.I.P]</h3>
-            <div class="command list">
+            <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">/play</span>
                     <span class="command-desc">Play a Song</span>
@@ -96,21 +130,25 @@
         </div>
 
         <div class="command-category">
-        <h3 class="category-title">Tools</h3>
-        <div class="command-list">
-            <div class="command-item">
-                <span class="command-name">/github-track</span>
-                <span class="command-desc">Track a Github Repository for Updates</span>
+            <h3 class="category-title">Tools</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <span class="command-name">/github-stars</span>
+                    <span class="command-desc">Show a Github Repository's Stars</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/github-track</span>
+                    <span class="command-desc">Track a Github Repository for Updates</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/mcskin</span>
+                    <span class="command-desc">Display a Minecraft User's Skin</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/mcstatus</span>
+                    <span class="command-desc">Display a Minecraft Server's Stats</span>
+                </div>
             </div>
-            <div class="command-item">
-                <span class="command-name">/mcskin</span>
-                <span class="command-desc">Display a Minecraft User's Skin</span>
-            </div>
-            <div class="command-item">
-                <span class="command-name">/mcstatus</span>
-                <span class="command-desc">Display a Minecraft Server's Stats</span>
-            </div>
-        </div>
         </div>
         
         <div class="command-category">
@@ -155,6 +193,10 @@
             <h3 class="category-title">Utility</h3>
             <div class="command-list">
                 <div class="command-item">
+                    <span class="command-name">/afk</span>
+                    <span class="command-desc">Set your AFK Status</span>
+                </div>
+                <div class="command-item">
                     <span class="command-name">/announce</span>
                     <span class="command-desc">Send an Announcement</span>
                 </div>
@@ -167,6 +209,10 @@
                     <span class="command-desc">Get Cryptocurrency Prices</span>
                 </div>
                 <div class="command-item">
+                    <span class="command-name">/define</span>
+                    <span class="command-desc">Define a Word</span>
+                </div>
+                <div class="command-item">
                     <span class="command-name">/echo</span>
                     <span class="command-desc">Repeat a Message</span>
                 </div>
@@ -175,8 +221,16 @@
                     <span class="command-desc">View the Bot Guide</span>
                 </div>
                 <div class="command-item">
+                    <span class="command-name">/hex</span>
+                    <span class="command-desc">Preview a Hex Color</span>
+                </div>
+                <div class="command-item">
                     <span class="command-name">/info</span>
                     <span class="command-desc">View Bot Information</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/poll</span>
+                    <span class="command-desc">Create a Poll</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/reload</span>
@@ -209,12 +263,13 @@
                     <span class="command-desc">Link to the Developer's Github!</span>
                 </div>
             </div>
+        </div>
 
-        
     </div>
 
 </body>
 
 <footer>
     <p id="footer-text">©️2026 All rights reserved | Crimstone | 523co | AubergineUX</p>
+</footer>
 </html>
