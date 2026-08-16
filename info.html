@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What Crimstone Bot stores, why it stores it, and how to have it deleted.">
+    <meta name="author" content="AubergineUX">
+    <title>Crimstone Privacy Policy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+</head>
+<body>
+    <nav id="nav">
+        <div id="navtext-div">
+            <a href="index.html" class="navtext">Home</a>
+            <a href="commands.html" class="navtext">Commands</a>
+            <a href="developers.html" class="navtext">Developers</a>
+            <a href="privacy.html" class="navtext">Privacy</a>
+        </div>
+    </nav>
+
+    <img id="logo-main-1" src="images/logo.png" alt="Crimstone logo">
+    <p id="botname-main-1">Crimstone</p>
+    <p id="botname-main-2">Open-Source All-In-One Moderation Bot!</p>
+
+    <div id="main-buttons">
+        <a href="developers.html"><button id="main-button-1">More Info</button></a>
+        <a href="https://osm.pm/ruby"><button id="main-button-3">Bot Support</button></a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1507721065235877958"><button id="main-button-2">Invite Me</button></a>
+    </div>
+
+    <div id="commands">
+        <h2 id="commands-title">Privacy Policy</h2>
+
+        <ul class="policy-meta">
+            <li>Effective <span class="fill">16 August 2026</span></li>
+            <li>App ID 1507721065235877958</li>
+            <li>Operated by AubergineUX</li>
+        </ul>
+
+        <div class="policy-summary">
+            <p><strong>The short version.</strong> Crimstone stores the smallest amount of Discord data it needs to run its features — mainly IDs and counters. It does not keep your message content, it is never sold or handed to advertisers, and you can have everything about you deleted by asking.</p>
+            <p>The rest of this page spells out exactly what that means. If anything here is unclear, ask before you invite the bot.</p>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Who runs Crimstone</h3>
+            <div class="policy-body">
+                <p>Crimstone is a Discord bot built and operated by <span class="fill">Ruby V</span>, trading as AubergineUX, an independent developer based in the United States. There is no company behind it and no team — one person maintains the code, the host, and the data.</p>
+                <p>This policy covers the bot and this website. It does not cover Discord, which has <a href="https://discord.com/privacy" rel="noopener">its own privacy policy</a>, or any other service you reach through a link.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">What Crimstone stores</h3>
+            <div class="policy-body">
+                <p>Crimstone stores data in two situations: when a server adds it, and when someone uses a feature that has to remember something. Everything it keeps is listed below.</p>
+
+                <h4 class="policy-sub">Server records</h4>
+                <p>Created when Crimstone joins a server, so it knows how that server has configured it.</p>
+                <div class="policy-record">{
+  <span class="key">"guildId"</span>: "000000000000000000",  <span class="note">// which server</span>
+  <span class="key">"prefix"</span>: "!",                    <span class="note">// set by an admin</span>
+  <span class="key">"channels"</span>: { ... },              <span class="note">// e.g. where level-ups are announced</span>
+  <span class="key">"roles"</span>: { ... },                 <span class="note">// e.g. level reward roles</span>
+  <span class="key">"enabled"</span>: { ... }                <span class="note">// which features are switched on</span>
+}</div>
+                <p class="policy-caption">Set by server administrators. No personal information beyond Discord IDs.</p>
+
+                <h4 class="policy-sub">Member records</h4>
+                <p>Created the first time you trigger a feature that tracks progress, such as earning XP.</p>
+                <div class="policy-record">{
+  <span class="key">"userId"</span>: "000000000000000000",   <span class="note">// your Discord ID</span>
+  <span class="key">"guildId"</span>: "000000000000000000",  <span class="note">// scoped per server</span>
+  <span class="key">"xp"</span>: 0,                          <span class="note">// a number, not your messages</span>
+  <span class="key">"level"</span>: 0,
+  <span class="key">"lastMessage"</span>: 0                  <span class="note">// timestamp, for XP cooldown only</span>
+}</div>
+                <p class="policy-caption">Your XP is calculated from the fact that you sent a message, not from what the message said.</p>
+
+                <h4 class="policy-sub">Moderation records</h4>
+                <p>When a moderator uses a command such as <code>/ban</code>, Crimstone stores the target user's ID, the moderator's ID, the server ID, the action taken, the reason given, and a timestamp. This is how servers keep a usable moderation history.</p>
+
+                <h4 class="policy-sub">Command input</h4>
+                <p>When a command needs text to work — a reason, a tag, a nickname, anything you type into a slash command option — that text is stored so the feature can do its job. Only supply information you are comfortable having saved.</p>
+
+                <h4 class="policy-sub">Errors and logs</h4>
+                <p>When something breaks, Crimstone writes a short technical log so the fault can be found. Logs can include your user ID, the server ID, the command name, and the error itself. They are kept no longer than <span class="fill">30 days</span> and are used only for fixing bugs.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">What Crimstone never stores</h3>
+            <div class="policy-body">
+                <ul class="policy-never">
+                    <li>The content of your messages. Message events are read in memory to award XP and to detect commands, then discarded — they are not written to disk.</li>
+                    <li>Direct messages between you and anyone else.</li>
+                    <li>Voice audio, attachments, images, or files.</li>
+                    <li>Your email address, phone number, real name, or address.</li>
+                    <li>Payment details. Crimstone takes no payments.</li>
+                    <li>Your IP address or device information.</li>
+                    <li>Anything at all from servers Crimstone has not been invited to.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Why it is stored</h3>
+            <div class="policy-body">
+                <ul>
+                    <li><strong>To make features work.</strong> A leveling system cannot show your level without recording it.</li>
+                    <li><strong>To respect server settings.</strong> Configuration has to persist between restarts.</li>
+                    <li><strong>To give moderators a history.</strong> Past actions need to stay visible to the staff of that server.</li>
+                    <li><strong>To prevent abuse.</strong> Cooldown timestamps stop XP farming and command spam.</li>
+                    <li><strong>To fix problems.</strong> Error logs make bugs reproducible.</li>
+                </ul>
+                <p>Data is never used for advertising, profiling, training machine learning models, or anything unrelated to running the bot.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Where and how it is stored</h3>
+            <div class="policy-body">
+                <p>Crimstone's data lives on a server rented from <span class="fill">[hosting provider]</span>, located in <span class="fill">[country]</span>. Records are held in structured files on that server. If you use Crimstone from outside that country, your data is processed there.</p>
+                <p>Access is limited to the bot operator, over authenticated connections. Backups are kept for <span class="fill">[7 days]</span> and are overwritten on a rolling basis.</p>
+                <p>Reasonable steps are taken to keep this data secure, but no service can promise perfect security. Treat Crimstone the way you would treat any small self-hosted project: do not put sensitive information into it. If a breach affects your data, notice will be posted in the support server and on this site as quickly as the facts allow.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">How long it is kept</h3>
+            <div class="policy-body">
+                <ul>
+                    <li><strong>Server records</strong> are deleted within <span class="fill">30 days</span> of Crimstone being removed from that server.</li>
+                    <li><strong>Member records</strong> are kept while you remain in a server that uses Crimstone, and are deleted on request at any time.</li>
+                    <li><strong>Moderation records</strong> are kept while the bot remains in that server, since they belong to the server's staff.</li>
+                    <li><strong>Command input</strong> is deleted when the thing it belongs to is deleted.</li>
+                    <li><strong>Logs</strong> are rotated out after <span class="fill">30 days</span>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Who else sees it</h3>
+            <div class="policy-body">
+                <p>Crimstone's data is not sold, rented, or traded. It is shared only in these cases:</p>
+                <ul>
+                    <li><strong>Discord</strong> — everything the bot does travels over Discord's API, because that is how bots work.</li>
+                    <li><strong>The hosting provider</strong> — as the operator of the machine the data sits on.</li>
+                    <li><strong>Your server's moderators</strong> — moderation history is visible to the staff of the server it happened in.</li>
+                    <li><strong>Other members of your server</strong> — leaderboards, level-up messages, and rank commands are public by design. Anything visible in a channel is visible to whoever can read that channel.</li>
+                    <li><strong>Bot listing sites</strong> such as <a href="https://top.gg" rel="noopener">top.gg</a> receive only totals, such as server count. No individual data is sent.</li>
+                    <li><strong>The law</strong> — if a valid legal request requires disclosure.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Your choices</h3>
+            <div class="policy-body">
+                <p>You can ask for a copy of everything Crimstone holds about you, ask for it to be corrected, or ask for it to be deleted. There is no charge and you do not need to give a reason.</p>
+                <ul>
+                    <li>Run <code>/data export</code> to receive your records.</li>
+                    <li>Run <code>/data delete</code> to erase them.</li>
+                    <li>Or contact the operator using the details below.</li>
+                </ul>
+                <p>Requests are handled within <span class="fill">30 days</span>. Deletion is permanent — XP and levels cannot be restored afterwards. Note that continuing to use tracked features will start building a new record.</p>
+                <p>Depending on where you live you may have additional rights, including under the UK and EU GDPR and the California Consumer Privacy Act. Those rights are honoured regardless of where you are. Where the GDPR applies, the lawful basis for this processing is legitimate interest: operating a bot that a server has chosen to install.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">If you run a server</h3>
+            <div class="policy-body">
+                <p>Inviting Crimstone means you are asking it to process data about your members. Please make sure your members know it is there, keep the permissions granted to the minimum the features need, and remove the bot if you no longer want that processing to happen. Any settings you configure are your responsibility.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Age</h3>
+            <div class="policy-body">
+                <p>Discord requires users to be at least 13, or older where local law sets a higher minimum. Crimstone is not intended for anyone below that age and does not knowingly store their data. If you believe a child's data has been stored, get in touch and it will be removed.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Changes to this policy</h3>
+            <div class="policy-body">
+                <p>This policy will change as Crimstone changes. The effective date at the top always reflects the current version. Significant changes will be announced in the support server before they take effect. Continuing to use the bot after that means you accept the updated policy.</p>
+            </div>
+        </div>
+
+        <div class="command-category">
+            <h3 class="category-title">Contact</h3>
+            <div class="policy-body">
+                <dl class="policy-contact">
+                    <dt>Email</dt>
+                    <dd><span class="fill">[privacy@aubergineux.com]</span></dd>
+                    <dt>Support</dt>
+                    <dd><a href="https://osm.pm/ruby">osm.pm/ruby</a></dd>
+                    <dt>Source</dt>
+                    <dd><a href="https://github.com/aubergine-ux" rel="noopener">github.com/aubergine-ux</a></dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p id="footer-text">©️2026 All rights reserved | Crimstone | 523co | AubergineUX</p>
+    </footer>
+</body>
+</html>
