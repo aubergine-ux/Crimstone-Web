@@ -13,7 +13,7 @@ nav {
     transition: 0.2s;
 }
 
-#navtext {
+#navtext, .navtext {
     color: white;
     font-size: 20px;
     margin: 10px 0 10px 0;
@@ -22,6 +22,7 @@ nav {
 
 #navtext-div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -39,7 +40,7 @@ nav {
     text-align: center;
     font-size: 40px;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin: 40px 0 5px;
 }
 
 #botname-main-2 {
@@ -51,6 +52,7 @@ nav {
 
 #main-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
@@ -60,9 +62,10 @@ nav {
     justify-content: space-evenly;
 }
 
-#main-button-1 {
+.main-button {
     width: 150px;
     height: 50px;
+    box-sizing: border-box;
     border-radius: 50px;
     background-color: #860735;
     color: white;
@@ -70,36 +73,19 @@ nav {
     transition: 0.5s;
     cursor: pointer;
     font-weight: bold;
-}
-
-#main-button-2 {
-    width: 150px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: #860735;
-    color: white;
-    border: 3px solid #ce175a;
-    transform: 0.5s;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#main-button-3 {
-    width: 150px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: #860735;
-    color: white;
-    border: 3px solid #ce175a;
-    transform: 0.5s;
-    cursor: pointer;
-    font-weight: bold;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 #main-info {
     width: auto;
-    max-width: 60%;
-    height: 250px;
+    max-width: min(700px, 90%);
+    min-height: 250px;
+    padding: 25px 40px;
+    box-sizing: border-box;
     border-radius: 70px;
     border: 3px solid #ce175a;
     transition: 0.5s;
@@ -125,6 +111,22 @@ nav {
 
 #main-info-1, #main-info-2 {
     margin: 0;
+}
+
+#main-info h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.intro {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 0 25px;
+}
+
+.intro a, .command-desc a {
+    color: #ffb3cf;
 }
 
 #dev {
@@ -155,7 +157,7 @@ nav {
     color: white;
     text-align: center;
     font-size: 30px;
-    margin-bottom: 0 auto;
+    margin: 20px 0;
 }
 
 .dev-card {
@@ -175,6 +177,7 @@ nav {
 }
 
 .dev-name {
+    font-size: 1.1rem;
     text-align: center;
     margin: 12px 0 4px;
 }
@@ -207,6 +210,7 @@ nav {
 
 .category-title {
     font-size: 20px;
+    margin-top: 0;
     color: white;
     border-bottom: 1px solid #ce175a;
     padding-bottom: 8px;
@@ -226,6 +230,18 @@ nav {
     gap: 16px;
 }
 
+@media (max-width: 600px) {
+    .command-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .command-name {
+        flex-basis: auto;
+    }
+}
+
 .command-name {
     background: #f35c94;
     color: white;
@@ -233,9 +249,12 @@ nav {
     font-size: 18px;
     padding: 4px 10px;
     min-width: 120px;
+    flex: 0 0 140px;
+    box-sizing: border-box;
 }
 
 .command-desc {
+    flex: 1;
     color: white;
     font-size: 18px;
 }

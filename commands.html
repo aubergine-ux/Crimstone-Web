@@ -3,62 +3,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crimstone Commands – Moderation, Leveling & Utility Slash Commands</title>
-    <meta name="description" content="Full list of Crimstone's slash commands for Discord: moderation, leveling and XP, utility tools, and fun commands.">
-    <link rel="canonical" href="https://crim.aubergineux.com/commands.html">
+    <title>Crimstone Commands – All 61 Slash Commands</title>
+    <meta name="description" content="The full list of Crimstone&#x27;s 61 Discord slash commands: moderation, leveling and rank cards, server setup, tools, utility and fun.">
     <meta name="author" content="AubergineUX">
+    <meta name="theme-color" content="#ce175a">
+    <link rel="canonical" href="https://crim.aubergineux.com/commands.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Crimstone">
+    <meta property="og:title" content="Crimstone Commands – All 61 Slash Commands">
+    <meta property="og:description" content="The full list of Crimstone&#x27;s 61 Discord slash commands: moderation, leveling and rank cards, server setup, tools, utility and fun.">
+    <meta property="og:url" content="https://crim.aubergineux.com/commands.html">
+    <meta property="og:image" content="https://crim.aubergineux.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Crimstone bot logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crimstone Commands – All 61 Slash Commands">
+    <meta name="twitter:description" content="The full list of Crimstone&#x27;s 61 Discord slash commands: moderation, leveling and rank cards, server setup, tools, utility and fun.">
+    <meta name="twitter:image" content="https://crim.aubergineux.com/images/og-image.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon-48.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Crimstone slash commands",
+  "numberOfItems": 61,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "/ban",
+      "description": "Ban a User from the Server"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "/unban",
+      "description": "Lift a Ban from a User"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "/kick",
+      "description": "Kick a User from the Server"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "/timeout",
+      "description": "Timeout a User for a Set Duration"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "/purge",
+      "description": "Delete Multiple Messages at Once"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "/slowmode",
+      "description": "Set Slowmode for a Channel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "/nickname",
+      "description": "Change or Reset a User's Nickname"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "/role-give",
+      "description": "Give a Role to a User"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "/role-remove",
+      "description": "Remove a Role from a User"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "/role-search",
+      "description": "List Every Member with a Role"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "/warn",
+      "description": "Warn a User"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "/unwarn",
+      "description": "Remove a Warning from a User"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "/warnings",
+      "description": "View a User's Warnings"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "/modstats",
+      "description": "View a Member's Moderation History"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "/rank",
+      "description": "View Your Level & XP"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "/rankcard",
+      "description": "Customize Your Rank Card"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "/leaderboard",
+      "description": "View the Top Members by XP, in This Server or Globally"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "/levelrole",
+      "description": "Give Out Roles When Members Reach a Level"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "/givexp",
+      "description": "Add or Remove XP from a User"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "/setxp",
+      "description": "Set a User's XP to an Exact Amount"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "/config",
+      "description": "Configure Level-Ups, Mod Logs, XP & More"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "/auditlog",
+      "description": "Choose What Crimstone Logs & Where"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "/github-stars",
+      "description": "Show a GitHub Repository's Stars"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "/github-track",
+      "description": "Track a GitHub Repository Live through a Webhook"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "/mcskin",
+      "description": "Display a Minecraft Player's Skin"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "/mcstatus",
+      "description": "Check a Minecraft Server's Status"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "/steal",
+      "description": "Add an Emoji from Another Server to This One"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "name": "/translate",
+      "description": "Translate Text into Another Language"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "name": "/8ball",
+      "description": "Ask the Magic 8-Ball a Question"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "name": "/catfact",
+      "description": "Send a Random Cat Fact"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "name": "/coinflip",
+      "description": "Flip a Coin"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "name": "/deepfry",
+      "description": "Deep-Fry an Image"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "name": "/gif",
+      "description": "Send a Random Gif"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "name": "/meow",
+      "description": "Meow!"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "name": "/mrrp",
+      "description": "Mrrp!"
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "name": "/ping",
+      "description": "Pong!"
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "name": "/roll",
+      "description": "Roll a 6-Sided Dice"
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "name": "/ship",
+      "description": "Check Compatibility between Two Users"
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "name": "/afk",
+      "description": "Set Your AFK Status"
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "name": "/announce",
+      "description": "Send an Announcement to a Channel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "name": "/avatar",
+      "description": "Display a User's Avatar"
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "name": "/crypto",
+      "description": "Get Cryptocurrency Prices"
+    },
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "name": "/define",
+      "description": "Look Up the Definition of a Word"
+    },
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "name": "/echo",
+      "description": "Repeat Your Message"
+    },
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "name": "/embed",
+      "description": "Build & Post a Rich Embed"
+    },
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "name": "/guide",
+      "description": "Search the discord.js Guide"
+    },
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "name": "/help",
+      "description": "List Every Command, or Get Details on One"
+    },
+    {
+      "@type": "ListItem",
+      "position": 48,
+      "name": "/hex",
+      "description": "Preview a Hex Color"
+    },
+    {
+      "@type": "ListItem",
+      "position": 49,
+      "name": "/info",
+      "description": "Get Info about a User or the Server"
+    },
+    {
+      "@type": "ListItem",
+      "position": 50,
+      "name": "/poll",
+      "description": "Create a Yes/No Poll"
+    },
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "name": "/reach",
+      "description": "See How Far Crimstone Has Spread"
+    },
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "name": "/reload",
+      "description": "Reload a Command (Bot Developer)"
+    },
+    {
+      "@type": "ListItem",
+      "position": 53,
+      "name": "/reminder",
+      "description": "Set, List or Cancel Reminders"
+    },
+    {
+      "@type": "ListItem",
+      "position": 54,
+      "name": "/roleinfo",
+      "description": "View Information about a Role"
+    },
+    {
+      "@type": "ListItem",
+      "position": 55,
+      "name": "/server",
+      "description": "View Server Information"
+    },
+    {
+      "@type": "ListItem",
+      "position": 56,
+      "name": "/serverstats",
+      "description": "See How Active the Server Has Been"
+    },
+    {
+      "@type": "ListItem",
+      "position": 57,
+      "name": "/snipe",
+      "description": "Bring Back a Recently Deleted Message"
+    },
+    {
+      "@type": "ListItem",
+      "position": 58,
+      "name": "/uptime",
+      "description": "View Crimstone's Uptime"
+    },
+    {
+      "@type": "ListItem",
+      "position": 59,
+      "name": "/user",
+      "description": "View User Information"
+    },
+    {
+      "@type": "ListItem",
+      "position": 60,
+      "name": "/weather",
+      "description": "Get the Weather for a City"
+    },
+    {
+      "@type": "ListItem",
+      "position": 61,
+      "name": "/aubergine",
+      "description": "Link to the Developer's GitHub"
+    }
+  ]
+}
+    </script>
 </head>
 <body>
-    <nav id="nav">
+    <nav id="nav" aria-label="Main">
         <div id="navtext-div">
-            <a href="index.html" id="navtext">Home</a>
-            <a href="commands.html" id="navtext">Commands</a>
-            <a href="developers.html" id="navtext">Developers</a>
-            <a href="privacy.html" id="navtext">Legal</a>
+            <a href="/" class="navtext">Home</a>
+            <a href="commands.html" class="navtext">Commands</a>
+            <a href="developers.html" class="navtext">Developers</a>
+            <a href="privacy.html" class="navtext">Legal</a>
         </div>
     </nav>
-    
-    <img id="logo-main-1" src="images/logo.png">
-    <p id="botname-main-1">Crimstone</p>
-    <p id="botname-main-2">Open-Source All-In-One Moderation Bot!</p>
 
-    <div id="main-buttons">
-        <a href="developers.html"><button id="main-button-1">More Info</button></a>
-        <a href="https://osm.pm/ruby"><button id="main-button-3">Bot Support</button></a>
-        <a href="https://discord.com/oauth2/authorize?client_id=1507721065235877958"><button id="main-button-2">Invite Me</button></a>
-    </div>
+    <header>
+        <img id="logo-main-1" src="images/logo-400.png" alt="Crimstone logo" width="200" height="200">
+        <p id="botname-main-1">Crimstone</p>
+        <p id="botname-main-2">Open-Source All-In-One Discord Bot!</p>
 
-    <div id="commands">
-        <h2 id="commands-title">Commands</h2>
+        <div id="main-buttons">
+            <a class="main-button" href="developers.html">More Info</a>
+            <a class="main-button" href="https://osm.pm/ruby" rel="noopener">Bot Support</a>
+            <a class="main-button" href="https://discord.com/oauth2/authorize?client_id=1507721065235877958" rel="noopener">Invite Me</a>
+        </div>
+    </header>
 
-        <div class="command-category">
-            <h3 class="category-title">Moderation</h3>
+    <main id="commands">
+        <h1 id="commands-title">Commands</h1>
+        <p class="intro">All 61 of Crimstone's slash commands. Type <strong>/help</strong> in Discord for details on any of them.</p>
+
+        <section class="command-category">
+            <h2 class="category-title">Moderation (14)</h2>
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">/ban</span>
                     <span class="command-desc">Ban a User from the Server</span>
                 </div>
                 <div class="command-item">
+                    <span class="command-name">/unban</span>
+                    <span class="command-desc">Lift a Ban from a User</span>
+                </div>
+                <div class="command-item">
                     <span class="command-name">/kick</span>
                     <span class="command-desc">Kick a User from the Server</span>
                 </div>
                 <div class="command-item">
-                    <span class="command-name">/nickname</span>
-                    <span class="command-desc">Change a User's Nickname</span>
+                    <span class="command-name">/timeout</span>
+                    <span class="command-desc">Timeout a User for a Set Duration</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/purge</span>
-                    <span class="command-desc">Delete Set amount of Messages</span>
-                </div>
-                <div class="command-item">
-                    <span class="command-name">/timeout</span>
-                    <span class="command-desc">Mutes a User for a Set Duration</span>
+                    <span class="command-desc">Delete Multiple Messages at Once</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/slowmode</span>
                     <span class="command-desc">Set Slowmode for a Channel</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/nickname</span>
+                    <span class="command-desc">Change or Reset a User's Nickname</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/role-give</span>
@@ -70,7 +468,7 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">/role-search</span>
-                    <span class="command-desc">Search for Users with a Role</span>
+                    <span class="command-desc">List Every Member with a Role</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/warn</span>
@@ -84,78 +482,94 @@
                     <span class="command-name">/warnings</span>
                     <span class="command-desc">View a User's Warnings</span>
                 </div>
+                <div class="command-item">
+                    <span class="command-name">/modstats</span>
+                    <span class="command-desc">View a Member's Moderation History</span>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="command-category">
-            <h3 class="category-title">Leveling</h3>
+        <section class="command-category">
+            <h2 class="category-title">Leveling (6)</h2>
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">/rank</span>
-                    <span class="command-desc">View a User's Rank & Level</span>
+                    <span class="command-desc">View Your Level & XP</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/rankcard</span>
+                    <span class="command-desc">Customize Your Rank Card</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/leaderboard</span>
-                    <span class="command-desc">View the Server's Top Ranks</span>
+                    <span class="command-desc">View the Top Members by XP, in This Server or Globally</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/levelrole</span>
+                    <span class="command-desc">Give Out Roles When Members Reach a Level</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/givexp</span>
-                    <span class="command-desc">Give XP to a User</span>
+                    <span class="command-desc">Add or Remove XP from a User</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/setxp</span>
-                    <span class="command-desc">Set a User's XP</span>
+                    <span class="command-desc">Set a User's XP to an Exact Amount</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="command-category">
-            <h3 class="category-title">Music [W.I.P]</h3>
+        <section class="command-category">
+            <h2 class="category-title">Server Setup (2)</h2>
             <div class="command-list">
                 <div class="command-item">
-                    <span class="command-name">/play</span>
-                    <span class="command-desc">Play a Song</span>
+                    <span class="command-name">/config</span>
+                    <span class="command-desc">Configure Level-Ups, Mod Logs, XP & More</span>
                 </div>
                 <div class="command-item">
-                    <span class="command-name">/stop</span>
-                    <span class="command-desc">Stop Music & Clear Queue</span>
-                </div>
-                <div class="command-item">
-                    <span class="command-name">/skip</span>
-                    <span class="command-desc">Skip the current Song</span>
-                </div>
-                <div class="command-item">
-                    <span class="command-name">/queue</span>
-                    <span class="command-desc">View Queued Music</span>
+                    <span class="command-name">/auditlog</span>
+                    <span class="command-desc">Choose What Crimstone Logs & Where</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="command-category">
-            <h3 class="category-title">Tools</h3>
+        <section class="command-category">
+            <h2 class="category-title">Tools (6)</h2>
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">/github-stars</span>
-                    <span class="command-desc">Show a Github Repository's Stars</span>
+                    <span class="command-desc">Show a GitHub Repository's Stars</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/github-track</span>
-                    <span class="command-desc">Track a Github Repository for Updates</span>
+                    <span class="command-desc">Track a GitHub Repository Live through a Webhook</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/mcskin</span>
-                    <span class="command-desc">Display a Minecraft User's Skin</span>
+                    <span class="command-desc">Display a Minecraft Player's Skin</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/mcstatus</span>
-                    <span class="command-desc">Display a Minecraft Server's Stats</span>
+                    <span class="command-desc">Check a Minecraft Server's Status</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/steal</span>
+                    <span class="command-desc">Add an Emoji from Another Server to This One</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/translate</span>
+                    <span class="command-desc">Translate Text into Another Language</span>
                 </div>
             </div>
-        </div>
-        
-        <div class="command-category">
-            <h3 class="category-title">Fun</h3>
+        </section>
+
+        <section class="command-category">
+            <h2 class="category-title">Fun (10)</h2>
             <div class="command-list">
+                <div class="command-item">
+                    <span class="command-name">/8ball</span>
+                    <span class="command-desc">Ask the Magic 8-Ball a Question</span>
+                </div>
                 <div class="command-item">
                     <span class="command-name">/catfact</span>
                     <span class="command-desc">Send a Random Cat Fact</span>
@@ -165,12 +579,16 @@
                     <span class="command-desc">Flip a Coin</span>
                 </div>
                 <div class="command-item">
+                    <span class="command-name">/deepfry</span>
+                    <span class="command-desc">Deep-Fry an Image</span>
+                </div>
+                <div class="command-item">
                     <span class="command-name">/gif</span>
-                    <span class="command-desc">Send a Gif</span>
+                    <span class="command-desc">Send a Random Gif</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/meow</span>
-                    <span class="command-desc">Send a Random Cat Image</span>
+                    <span class="command-desc">Meow!</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/mrrp</span>
@@ -178,29 +596,29 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">/ping</span>
-                    <span class="command-desc">Pong</span>
+                    <span class="command-desc">Pong!</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/roll</span>
-                    <span class="command-desc">Roll a Dice</span>
+                    <span class="command-desc">Roll a 6-Sided Dice</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/ship</span>
-                    <span class="command-desc">Ship Two Users Together</span>
+                    <span class="command-desc">Check Compatibility between Two Users</span>
                 </div>
             </div>
-        </div>
- 
-        <div class="command-category">
-            <h3 class="category-title">Utility</h3>
+        </section>
+
+        <section class="command-category">
+            <h2 class="category-title">Utility (22)</h2>
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">/afk</span>
-                    <span class="command-desc">Set your AFK Status</span>
+                    <span class="command-desc">Set Your AFK Status</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/announce</span>
-                    <span class="command-desc">Send an Announcement</span>
+                    <span class="command-desc">Send an Announcement to a Channel</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/avatar</span>
@@ -212,15 +630,23 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">/define</span>
-                    <span class="command-desc">Define a Word</span>
+                    <span class="command-desc">Look Up the Definition of a Word</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/echo</span>
-                    <span class="command-desc">Repeat a Message</span>
+                    <span class="command-desc">Repeat Your Message</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/embed</span>
+                    <span class="command-desc">Build & Post a Rich Embed</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/guide</span>
-                    <span class="command-desc">View the Bot Guide</span>
+                    <span class="command-desc">Search the discord.js Guide</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/help</span>
+                    <span class="command-desc">List Every Command, or Get Details on One</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/hex</span>
@@ -228,23 +654,43 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">/info</span>
-                    <span class="command-desc">View Bot Information</span>
+                    <span class="command-desc">Get Info about a User or the Server</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/poll</span>
-                    <span class="command-desc">Create a Poll</span>
+                    <span class="command-desc">Create a Yes/No Poll</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/reach</span>
+                    <span class="command-desc">See How Far Crimstone Has Spread</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/reload</span>
-                    <span class="command-desc">Reload a Command</span>
+                    <span class="command-desc">Reload a Command (Bot Developer)</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/reminder</span>
+                    <span class="command-desc">Set, List or Cancel Reminders</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/roleinfo</span>
+                    <span class="command-desc">View Information about a Role</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/server</span>
                     <span class="command-desc">View Server Information</span>
                 </div>
                 <div class="command-item">
+                    <span class="command-name">/serverstats</span>
+                    <span class="command-desc">See How Active the Server Has Been</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">/snipe</span>
+                    <span class="command-desc">Bring Back a Recently Deleted Message</span>
+                </div>
+                <div class="command-item">
                     <span class="command-name">/uptime</span>
-                    <span class="command-desc">View Bot Uptime</span>
+                    <span class="command-desc">View Crimstone's Uptime</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">/user</span>
@@ -252,26 +698,25 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">/weather</span>
-                    <span class="command-desc">Get the Weather for a Location</span>
+                    <span class="command-desc">Get the Weather for a City</span>
                 </div>
             </div>
-        </div>
- 
-        <div class="command-category">
-            <h3 class="category-title">Misc</h3>
+        </section>
+
+        <section class="command-category">
+            <h2 class="category-title">Misc (1)</h2>
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">/aubergine</span>
-                    <span class="command-desc">Link to the Developer's Github!</span>
+                    <span class="command-desc">Link to the Developer's GitHub</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </div>
+    </main>
 
+    <footer>
+        <p id="footer-text">©️2026 All rights reserved | Crimstone | 523co | AubergineUX</p>
+    </footer>
 </body>
-
-<footer>
-    <p id="footer-text">©️2026 All rights reserved | Crimstone | 523co | AubergineUX</p>
-</footer>
 </html>
