@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crim.aubergineux.com/sitemap.xml
