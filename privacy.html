@@ -77,7 +77,7 @@
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">Levels</span>
-                    <span class="command-desc">Your Discord user ID and XP in each server. Your level is worked out from your XP. If a server turns on voice XP, you also earn XP for time spent unmuted in a voice channel with others, but nothing about the call itself is saved.</span>
+                    <span class="command-desc">Your Discord user ID and XP in each server, plus the stats shown on rank cards and leaderboards: message count, minutes in voice, weekly and monthly XP, daily streak, and when you were last active. Your level is worked out from your XP. If a server turns on voice XP, you also earn XP for time spent unmuted in a voice channel with others, but nothing about the call itself is saved.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Server settings</span>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">Moderation</span>
-                    <span class="command-desc">Warnings (reason and moderator) and a case history of actions taken through Crimstone, including timeouts and kicks made by automod: action, user, moderator, reason, duration and time. The latest 500 cases per server are kept.</span>
+                    <span class="command-desc">Warnings (reason and moderator) and a case history of actions taken through Crimstone, including timeouts and kicks made by automod: action, user, moderator, reason, duration and time. Cases stay on record, even after a warning is removed, until they are deleted on request.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Giveaways</span>
@@ -167,11 +167,15 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">Which ones</span>
-                    <span class="command-desc">/translate (Google Translate, MyMemory), /weather (wttr.in), /crypto (CoinGecko), /define (Free Dictionary API), /mcskin and /mcstatus (Minotar, mcsrvstat.us, mc-api.net), /github-stars (GitHub), /catfact (catfact.ninja), /alerts (YouTube, Twitch)</span>
+                    <span class="command-desc">/translate (Google Translate, MyMemory), /weather (wttr.in), /crypto (CoinGecko), /define (Free Dictionary API), /mcskin and /mcstatus (Minotar, mcsrvstat.us, mc-api.net), /github-stars (GitHub), /catfact (catfact.ninja), /alerts (YouTube, Twitch), /importxp (MEE6)</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">top.gg</span>
                     <span class="command-desc">/vote sends your Discord user ID to top.gg to check whether you have voted. Crimstone also shares how many servers it is in with top.gg.</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">MEE6 import</span>
+                    <span class="command-desc">When an admin runs /importxp, Crimstone sends the server's ID to MEE6 and copies the user IDs and XP from that server's public MEE6 leaderboard. This can include members who have since left.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Discord</span>
@@ -189,7 +193,7 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">Do it yourself</span>
-                    <span class="command-desc">Clear your AFK by talking, cancel reminders with /reminder cancel, and reset your rank card with /rankcard reset. Admins can use /config reset, /auditlog reset, /automod reset, /welcome reset, /starboard disable, /alerts remove and /xpboost remove.</span>
+                    <span class="command-desc">Clear your AFK by talking, cancel reminders with /reminder cancel, and reset your rank card with /rankcard reset. Admins can delete one member's or the whole server's XP and stats with /resetxp, and can use /config reset, /auditlog reset, /automod reset, /welcome reset, /starboard disable, /alerts remove and /xpboost remove.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Ask</span>
