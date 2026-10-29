@@ -31,7 +31,7 @@
             <a href="/" class="navtext">Home</a>
             <a href="commands.html" class="navtext">Commands</a>
             <a href="developers.html" class="navtext">Developers</a>
-            <a href="privacy.html" class="navtext">Legal</a>
+            <a href="privacy.html" class="navtext" aria-current="page">Legal</a>
         </div>
     </nav>
 
@@ -43,7 +43,7 @@
         <div id="main-buttons">
             <a class="main-button" href="developers.html">More Info</a>
             <a class="main-button" href="https://osm.pm/ruby" rel="noopener">Bot Support</a>
-            <a class="main-button" href="https://discord.com/oauth2/authorize?client_id=1507721065235877958" rel="noopener">Invite Me</a>
+            <a class="main-button" id="invite-button" href="https://discord.com/oauth2/authorize?client_id=1507721065235877958" rel="noopener">Invite Me</a>
         </div>
     </header>
 
@@ -55,11 +55,11 @@
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">In short</span>
-                    <span class="command-desc">Crimstone only keeps what its features need to work: XP, server settings, moderation records, and things you set yourself like reminders. It never sells your data or uses it for ads. You can ask for any of it to be deleted.</span>
+                    <span class="command-desc">Crimstone only keeps what its features need to work: XP, server settings, moderation records, giveaway entries, open tickets, and things you set yourself like reminders. It never sells your data or uses it for ads. You can ask for any of it to be deleted.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Effective</span>
-                    <span class="command-desc">18 September 2026</span>
+                    <span class="command-desc">29 October 2026</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Applies to</span>
@@ -77,15 +77,27 @@
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">Levels</span>
-                    <span class="command-desc">Your Discord user ID and XP in each server. Your level is worked out from your XP.</span>
+                    <span class="command-desc">Your Discord user ID and XP in each server. Your level is worked out from your XP. If a server turns on voice XP, you also earn XP for time spent unmuted in a voice channel with others, but nothing about the call itself is saved.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Server settings</span>
-                    <span class="command-desc">Channel, role and feature choices made with /config, /auditlog, /levelrole and /rankcard</span>
+                    <span class="command-desc">Channel, role and feature choices made with /config, /auditlog, /automod, /welcome, /starboard, /ticket, /xpboost, /alerts, /levelrole and /rankcard. This includes a server's blocked-word list, its welcome and leave messages, and the YouTube or Twitch channels it follows.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Moderation</span>
-                    <span class="command-desc">Warnings (reason and moderator) and a case history of actions taken through Crimstone: action, user, moderator, reason, duration and time. The latest 500 cases per server are kept.</span>
+                    <span class="command-desc">Warnings (reason and moderator) and a case history of actions taken through Crimstone, including timeouts and kicks made by automod: action, user, moderator, reason, duration and time. The latest 500 cases per server are kept.</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">Giveaways</span>
+                    <span class="command-desc">The host, prize, end time, and the user IDs of everyone who entered, so winners can be picked and rerolled. Ended giveaways are kept for 7 days, then cleared out the next time the bot restarts.</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">Tickets</span>
+                    <span class="command-desc">While a ticket is open: who opened it, its number and when. This is removed when the ticket is closed.</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">Starboard</span>
+                    <span class="command-desc">Which messages have been reposted to the starboard and the ID of each repost, so star counts can be kept up to date</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Your settings</span>
@@ -103,11 +115,15 @@
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">Messages</span>
-                    <span class="command-desc">Message content is read to award XP and answer commands, then discarded. It is not written to disk.</span>
+                    <span class="command-desc">Message content is read to award XP, answer commands and check automod rules, then discarded. It is not written to disk.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Deleted messages</span>
                     <span class="command-desc">For /snipe, the last 5 deleted messages in each channel are held in memory only, and cleared whenever the bot restarts</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">Automod</span>
+                    <span class="command-desc">To catch spam and raids, automod holds the time and ID of your recent messages for up to a minute, and the times of recent joins (no user IDs) for up to 10 minutes, in memory only</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Personal details</span>
@@ -121,15 +137,23 @@
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">Mod & audit logs</span>
-                    <span class="command-desc">If a server's admins turn these on, Crimstone posts events such as bans, edited or deleted messages, joins, leaves and voice moves into a channel they choose. Those posts live in Discord and are controlled by the server.</span>
+                    <span class="command-desc">If a server's admins turn these on, Crimstone posts events such as bans, edited or deleted messages, joins, leaves and voice moves into a channel they choose. When automod removes a message, its content is posted there too. Those posts live in Discord and are controlled by the server.</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">Ticket transcripts</span>
+                    <span class="command-desc">When a ticket is closed, Crimstone builds a transcript of up to 1,000 of its messages and sends it to the person who opened it, and to the server's ticket log channel if one is set. Crimstone does not keep a copy.</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">Welcome & starboard</span>
+                    <span class="command-desc">Welcome and leave messages can name you when you join or leave. Starboard reposts a message's text and image to a highlights channel once it gets enough stars.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Public by design</span>
-                    <span class="command-desc">Rank cards, leaderboards and command replies are visible to anyone who can read the channel. Your XP can appear on the global leaderboard unless your server opts out with /config.</span>
+                    <span class="command-desc">Rank cards, leaderboards, giveaway winners and command replies are visible to anyone who can read the channel. Your XP can appear on the global leaderboard unless your server opts out with /config.</span>
                 </div>
                 <div class="command-item">
-                    <span class="command-name">Warnings</span>
-                    <span class="command-desc">If you are warned, Crimstone sends you a DM with the reason</span>
+                    <span class="command-name">Direct messages</span>
+                    <span class="command-desc">Crimstone may DM you when you are warned (with the reason), when your ticket is closed (with its transcript), or when automod removes you from a server because your account is too new to join</span>
                 </div>
             </div>
         </section>
@@ -139,11 +163,15 @@
             <div class="command-list">
                 <div class="command-item">
                     <span class="command-name">When used</span>
-                    <span class="command-desc">Some commands send the text you type to an outside service to get an answer. Your Discord account is not sent with it.</span>
+                    <span class="command-desc">Some commands send the text you type to an outside service to get an answer. Your Discord account is not sent with it, except for /vote.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Which ones</span>
-                    <span class="command-desc">/translate (Google Translate, MyMemory), /weather (wttr.in), /crypto (CoinGecko), /define (Free Dictionary API), /mcskin and /mcstatus (Minotar, mcsrvstat.us, mc-api.net), /github-stars (GitHub), /catfact (catfact.ninja)</span>
+                    <span class="command-desc">/translate (Google Translate, MyMemory), /weather (wttr.in), /crypto (CoinGecko), /define (Free Dictionary API), /mcskin and /mcstatus (Minotar, mcsrvstat.us, mc-api.net), /github-stars (GitHub), /catfact (catfact.ninja), /alerts (YouTube, Twitch)</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-name">top.gg</span>
+                    <span class="command-desc">/vote sends your Discord user ID to top.gg to check whether you have voted. Crimstone also shares how many servers it is in with top.gg.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Discord</span>
@@ -161,7 +189,7 @@
                 </div>
                 <div class="command-item">
                     <span class="command-name">Do it yourself</span>
-                    <span class="command-desc">Clear your AFK by talking, cancel reminders with /reminder cancel, and reset your rank card with /rankcard reset. Admins can use /config reset and /auditlog reset.</span>
+                    <span class="command-desc">Clear your AFK by talking, cancel reminders with /reminder cancel, and reset your rank card with /rankcard reset. Admins can use /config reset, /auditlog reset, /automod reset, /welcome reset, /starboard disable, /alerts remove and /xpboost remove.</span>
                 </div>
                 <div class="command-item">
                     <span class="command-name">Ask</span>
@@ -251,7 +279,7 @@
     </main>
 
     <footer>
-        <p id="footer-text">©️2026 All rights reserved | Crimstone | 523co | AubergineUX</p>
+        <p id="footer-text">©️2026 All rights reserved | Crimstone | <a href="https://523r.com/" rel="noopener">523co</a> | AubergineUX</p>
     </footer>
 </body>
 </html>
